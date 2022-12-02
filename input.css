@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-roboto;
+    }
+}
+@layer components {
+    /* NAVBAR */
+    .navbar {
+        @apply relative container mx-auto p-6;
+    }
+
+    .flex-container {
+        @apply flex items-center justify-between;
+    }
+
+     /* LOGO */
+    .logo {
+        @apply uppercase text-2xl text-brightRed;
+     }
+
+    /* NAVBAR MENU */
+    .menu-items {
+        @apply hidden md:flex items-center space-x-6;
+    }
+    .item-link {
+        @apply uppercase text-lg px-2 py-0.5 
+        hover:text-brightRed hover:shadow-sm transition duration-300;
+    }
+
+    /* BUTTON */
+    .btn {
+        @apply 
+            hidden capitalize px-6 py-2 text-white bg-brightRed border-2 border-transparent rounded-full 
+            hover:text-brightRed hover:bg-transparent hover:border-2 hover:border-brightRed hover:shadow-md transition duration-300
+            md:flex
+        ;
+    }
+    /* MENU BAR */
+    .menu-bar {
+        @apply cursor-pointer w-12 h-12
+        ;
+    }
+}
